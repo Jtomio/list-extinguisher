@@ -1,0 +1,22 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model ListExtinguisher {
+  id                  String   @id @default(uuid())
+  status              String
+  name                String
+  numberManufecturyng String
+  dateFabri           DateTime
+  dateTest            DateTime
+  place               String
+  area                String
+}

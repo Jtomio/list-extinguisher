@@ -16,7 +16,7 @@ export default function Header() {
   //   await signOut()
   // }
   return (
-    <Card className="flex items-center justify-between p-[1.875rem] -mt-3">
+    <Card className="-mt-3 flex items-center justify-between p-[1.875rem]">
       <Sheet>
         <SheetTrigger asChild>
           <Button variant={'outline'} size={'icon'}>
@@ -43,7 +43,7 @@ export default function Header() {
         </SheetContent>
       </Sheet>
       <h1 className="text-lg">
-        Equipe <span className="text-primary font-semibold">DELTA</span>
+        Equipe <span className="font-semibold text-primary">DELTA</span>
       </h1>
       <ToggleDark />
     </Card>
