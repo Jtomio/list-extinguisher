@@ -12,11 +12,14 @@ datasource db {
 
 model ListExtinguisher {
   id                  String   @id @default(uuid())
-  status              String
+  checked             Boolean
+  status              String[]
   name                String
   numberManufecturyng String
-  dateFabri           DateTime
+  type                String
+  height              String
+  nextRecharge        DateTime
   dateTest            DateTime
   place               String
-  area                String
+  area                String[]
 }
