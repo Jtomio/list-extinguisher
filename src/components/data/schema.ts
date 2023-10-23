@@ -6,6 +6,7 @@ export const listSchema = z.object({
   id: z.string(),
   label: z.string(),
   name: z.string(),
+  manufacturing: z.string(),
   type: z.string(),
   weight: z.string(),
   dateDue: z.string(),

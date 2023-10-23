@@ -61,6 +61,15 @@ export const columns: ColumnDef<List>[] = [
     enableHiding: false,
   },
   {
+    accessorKey: 'manufacturing',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Fabricação" />
+    ),
+    cell: ({ row }) => <div className="">{row.getValue('manufacturing')}</div>,
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
     accessorKey: 'type',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Tipo" />
