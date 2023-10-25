@@ -4,6 +4,7 @@ import { z } from 'zod'
 // IRL, you will have a schema for your data models.
 export const listSchema = z.object({
   id: z.string(),
+  inspectionDate: z.string(),
   label: z.string(),
   name: z.string(),
   manufacturing: z.string(),

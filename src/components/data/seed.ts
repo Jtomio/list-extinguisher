@@ -12,6 +12,6 @@ const lists = Array.from({ length: 100 }, () => ({
 }))
 
 fs.writeFileSync(
-  path.join(__dirname, 'lists.json'),
+  path.join(__dirname, 'list.json'),
   JSON.stringify(lists, null, 2),
 )

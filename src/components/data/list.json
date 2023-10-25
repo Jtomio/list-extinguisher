@@ -1,8 +1,9 @@
 [
   {
     "id": "EH-2230",
-    "label": "OK",
-    "name": "EH2230",
+    "inspectionDate": "",
+    "label": "OK",             
+    "name": "EH2230",             
     "manufacturing": "65465",
     "type": "PQS",
     "weight": "6kg",
@@ -13,6 +14,7 @@
   },
   {
     "id": "EH-2240",
+    "inspectionDate": "",
     "label": "Trocar",
     "name": "EH2240",
     "manufacturing": "65465",
@@ -25,6 +27,7 @@
   },
   {
     "id": "EH-2241",
+    "inspectionDate": "",
     "label": "Recarga",
     "name": "EH2241",
     "manufacturing": "65465",

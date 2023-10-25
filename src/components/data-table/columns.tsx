@@ -34,6 +34,15 @@ export const columns: ColumnDef<List>[] = [
     enableHiding: false,
   },
   {
+    accessorKey: 'inspectionDate',
+    header: ({ column }) => (
+      <DataTableColumnHeader column={column} title="Inspeção" />
+    ),
+    cell: ({ row }) => <div className="">{row.getValue('inspectionDate')}</div>,
+    enableSorting: false,
+    enableHiding: false,
+  },
+  {
     accessorKey: 'label',
     header: ({ column }) => (
       <DataTableColumnHeader column={column} title="Status" />

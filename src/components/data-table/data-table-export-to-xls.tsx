@@ -3,18 +3,19 @@
 import { BsFiletypeXls } from 'react-icons/bs'
 
 import { Button } from '@/components/ui/button'
-import { useState } from 'react'
+
+// import { useState } from 'react'
 
 export function DataTableExportToXls() {
-  const [selectedRows, setSelectedRows] = useState<number[]>([])
+  // const [selectedRows, setSelectedRows] = useState<number[]>([])
 
-  const handleCheckboxChange = (table: number) => {
-    if (selectedRows.includes(table)) {
-      setSelectedRows(selectedRows.filter((rowId) => rowId !== table))
-    } else {
-      setSelectedRows([...selectedRows, table])
-    }
-  }
+  // const handleCheckboxChange = (table: number) => {
+  //   if (selectedRows.includes(table)) {
+  //     setSelectedRows(selectedRows.filter((rowId) => rowId !== table))
+  //   } else {
+  //     setSelectedRows([...selectedRows, table])
+  //   }
+  // }
 
   return (
     <Button

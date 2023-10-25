@@ -7,6 +7,7 @@ import { Button } from './ui/button'
 import { Input } from './ui/input'
 import { Icons } from './icons'
 import { useRouter } from 'next/navigation'
+import { useToast } from './ui/use-toast'
 
 type UserAuthFormProps = React.HTMLAttributes<HTMLDivElement>
 
@@ -17,8 +18,8 @@ export default function UserAuthForm({
   const [isLoading, setisLoading] = React.useState<boolean>(false)
   const [email, setEmail] = React.useState('')
   const [password, setPassword] = React.useState('')
-  const [error, setError] = React.useState('')
   const router = useRouter()
+  const { toast } = useToast()
 
   async function onSubmit(event: React.SyntheticEvent) {
     event.preventDefault()
@@ -30,10 +31,19 @@ export default function UserAuthForm({
   }
 
   const handleLogin = async () => {
-    if (email === 'medriase@gmail.com' && password === 'jeison') {
+    if (email === 'user@gmail.com' && password === 'user') {
+      toast({
+        variant: 'default',
+        title: 'Tudo certo!',
+        description: 'Seja bem vindo.',
+      })
       return router.push('/dashboard')
     } else {
-      setError('Usuário ou senha incorretos!')
+      toast({
+        variant: 'destructive',
+        title: 'Usuário e/ou senha inconrretos!',
+        description: 'Verifique seus dados.',
+      })
     }
   }
 
@@ -69,13 +79,12 @@ export default function UserAuthForm({
               onChange={(e) => setPassword(e.target.value)}
             />
           </div>
-          <Button disabled={isLoading} onClick={handleLogin}>
+          <Button onClick={handleLogin} disabled={isLoading}>
             {isLoading && (
               <Icons.spinner className="mr-2 h-4 w-4 animate-spin" />
             )}
             Entrar com e-mail
           </Button>
-          {error && <p className="text-center text-red-500">{error}</p>}
         </div>
       </form>
     </div>

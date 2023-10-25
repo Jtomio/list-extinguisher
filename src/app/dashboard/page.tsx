@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 async function getLists() {
   const data = await fs.readFile(
-    path.join(process.cwd(), 'src/components/data/lists.json'),
+    path.join(process.cwd(), 'src/components/data/list.json'),
   )
 
   const lists = JSON.parse(data.toString())
@@ -25,14 +25,14 @@ async function getLists() {
 }
 
 export default async function TaskPage() {
-  const lists = await getLists()
+  const listItems = await getLists()
 
   return (
     <>
       <Header />
       <div className="container">
         <div className="py-10">
-          <DataTable data={lists} columns={columns} />
+          <DataTable data={listItems} columns={columns} />
         </div>
       </div>
     </>
